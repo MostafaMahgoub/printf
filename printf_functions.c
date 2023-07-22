@@ -1,4 +1,5 @@
 #include "main.h"
+#include "printf_functions.h"
 #include <stdarg.h>
 #include <unistd.h>
 
@@ -97,7 +98,7 @@ int print_special_string(char *str)
 
     for (; *str; str++)
     {
-        if (*str < 32 || *str >= 128)
+        if (*str < 32 || *str >= 127)
         {
             count += _putchar('\\');
             count += _putchar('x');
