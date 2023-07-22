@@ -97,7 +97,7 @@ int print_special_string(char *str)
 
     for (; *str; str++)
     {
-        if (*str < 32 || *str >= 127)
+        if (*str < 32 || *str >= 128)
         {
             count += _putchar('\\');
             count += _putchar('x');
@@ -175,6 +175,37 @@ int print_rot13(char *str)
         }
 
         str++;
+    }
+
+    return (count);
+}
+
+/**
+ * print_binary - prints an unsigned integer in binary format
+ * @n: the unsigned integer to print
+ *
+ * Return: the number of characters printed
+ */
+int print_binary(unsigned int n)
+{
+    int count = 0;
+    int i;
+    char buffer[32];
+
+    if (n == 0)
+    {
+        return (_putchar('0'));
+    }
+
+    for (i = 0; n > 0; i++)
+    {
+        buffer[i] = (n % 2 == 0) ? '0' : '1';
+        n /= 2;
+    }
+
+    for (i = i - 1; i >= 0; i--)
+    {
+        count += _putchar(buffer[i]);
     }
 
     return (count);

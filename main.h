@@ -9,5 +9,6 @@ int print_special_string(char *str);
 int print_pointer(void *ptr);
 int print_reversed(char *str);
 int print_rot13(char *str);
+int print_binary(unsigned int n);
 
-#endif /* PRINT_HELPERS_H */
+#endif 
