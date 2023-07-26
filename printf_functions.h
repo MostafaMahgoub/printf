@@ -1,6 +1,7 @@
 #ifndef PRINTF_FUNCTIONS_H
 #define PRINTF_FUNCTIONS_H
 
+int _printf(const char *format, ...);
 int _putchar(char c);
 int _strlen(char *str);
 int print_integer(int n);
